@@ -24,3 +24,4 @@ Due to time constraint, there are components that could probably have been done 
 * My personal laptop was used for deployment and EC2 keys were generated and stored locally and then attached during the deployment. AWS Key Management Service or any password vault integration was not included.
 * Dockerhub or ECR was not used as dockerfile was composed and uploaded to the git repo. This file was used from github to build the image and run the containers during the EC2 instance build.
 * No software provisioning, configuration management or automation tool such as Ansible were used as terraform (user_data) is capable of handling simpler scripts for this project. Provisioners would have been used for a complex setup.
+* SSL integration to DNS naming failed, attempt has been shared on withCertFolder
