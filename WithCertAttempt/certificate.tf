@@ -14,6 +14,9 @@ resource "aws_acm_certificate_validation" "cert" {
   certificate_arn         = aws_acm_certificate.rearc-lb-https.arn
   for_each                = aws_route53_record.cert_validation
   validation_record_fqdns = [aws_route53_record.cert_validation[each.key].fqdn]
+  timeouts {
+    create = "180m"
+  }
 }
 
 ####ACM CONFIG END
